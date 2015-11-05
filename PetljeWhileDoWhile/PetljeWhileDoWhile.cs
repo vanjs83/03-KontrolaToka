@@ -11,7 +11,7 @@ namespace Vsite.CSharp
             int brojBacanja = 0;
             int bacanje = 0;
             // TODO: Napisati simulaciju početka igre "Čovječe ne ljuti se": kocka se baca sve dok ne padne na 6
-
+            //do while
             {
                 ++brojBacanja;
                 bacanje = generatorSlučajnih.Next(1, 6); // generira slučajni broj između 1 i 6
@@ -20,7 +20,7 @@ namespace Vsite.CSharp
 
             int brojPređenihPolja = brojBacanja;
             // TODO: Napisati petlju u kojoj se kocka baca sve dok brojPređenihPolja ne postane veći od 12
-
+            //while
             {
                 bacanje = generatorSlučajnih.Next(1, 6); // generira slučajni broj između 1 i 6
                 Console.WriteLine("{0} + {1}", brojPređenihPolja + bacanje);
