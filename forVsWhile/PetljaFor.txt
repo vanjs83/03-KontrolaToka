@@ -1,1 +1,20 @@
-﻿
+﻿            for (int i = 0; i < 10; ++i)
+00000034  mov         dword ptr [rsp+20h],0 
+0000003c  jmp         0000000000000053 
+                Console.WriteLine(i);
+0000003e  mov         ecx,dword ptr [rsp+20h] 
+00000042  call        000000005E2AD4E0 
+00000047  nop 
+            for (int i = 0; i < 10; ++i)
+00000048  mov         eax,dword ptr [rsp+20h] 
+0000004c  add         eax,1 
+0000004f  mov         dword ptr [rsp+20h],eax 
+00000053  xor         eax,eax 
+00000055  cmp         dword ptr [rsp+20h],0Ah 
+0000005a  setl        al 
+0000005d  mov         dword ptr [rsp+2Ch],eax 
+00000061  movzx       eax,byte ptr [rsp+2Ch] 
+00000066  mov         byte ptr [rsp+28h],al 
+0000006a  movzx       eax,byte ptr [rsp+28h] 
+0000006f  test        eax,eax 
+00000071  jne         000000000000003E 

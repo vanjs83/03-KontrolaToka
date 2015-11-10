@@ -1,1 +1,29 @@
-﻿
+﻿            int j = 0;
+00000073  mov         dword ptr [rsp+24h],0 
+0000007b  jmp         0000000000000094 
+            {
+0000007d  nop 
+                Console.WriteLine(j);
+0000007e  mov         ecx,dword ptr [rsp+24h] 
+00000082  call        000000005E2AD4E0 
+00000087  nop 
+                ++j;
+00000088  mov         eax,dword ptr [rsp+24h] 
+0000008c  add         eax,1 
+0000008f  mov         dword ptr [rsp+24h],eax 
+            }
+00000093  nop 
+            while (j < 10)
+00000094  xor         eax,eax 
+00000096  cmp         dword ptr [rsp+24h],0Ah 
+0000009b  setl        al 
+0000009e  mov         dword ptr [rsp+30h],eax 
+000000a2  movzx       eax,byte ptr [rsp+30h] 
+000000a7  mov         byte ptr [rsp+28h],al 
+000000ab  movzx       eax,byte ptr [rsp+28h] 
+000000b0  test        eax,eax 
+000000b2  jne         000000000000007D 
+        }
+000000b4  jmp         00000000000000B6 
+000000b6  add         rsp,48h 
+000000ba  rep ret 
