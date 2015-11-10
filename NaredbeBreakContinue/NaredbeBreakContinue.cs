@@ -16,20 +16,21 @@ namespace Vsite.CSharp
                 Console.WriteLine(slučajniBroj);
 
                 // ako je broj paran, ne dodaje se (tj. treba se vratiti na početak petlje)
-                if (zbroj % 2 == 0)
+                if (slučajniBroj % 2 == 0)
                     continue;
 
-                // TODO: ako je broj dijeljiv s 12, tada treba prekinuti petlju
-                
+                // ako je broj dijeljiv s 12, tada treba prekinuti petlju
+                if (slučajniBroj % 12 == 0)
+                    break;
 
 
-                Console.WriteLine("{0} + {1}", zbroj + slučajniBroj);
+                Console.WriteLine("{0} + {1}", zbroj , slučajniBroj);
                 zbroj += slučajniBroj;
             }
 
             Console.WriteLine("Zbroj = {0}", zbroj);
 
-            // TODO: Pokrenite program, provjerite njegovu ispravnost a ispis prekopirajte u datoteku "Naredbe break i continue.txt" koja je dio projekta
+            // Pokrenite program, provjerite njegovu ispravnost a ispis prekopirajte u datoteku "Naredbe break i continue.txt" koja je dio projekta
 
             Console.ReadKey();
         }
