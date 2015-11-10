@@ -15,7 +15,7 @@ namespace Vsite.CSharp
                 int slučajniBroj = generatorSlučajnih.Next(2, 15); // generira slučajni broj između 2 i 14
                 Console.WriteLine(slučajniBroj);
 
-                // ako je broj paran, ne dodaje se (tj. treba se vratiti na početak petlje)
+                 //ako je broj paran, ne dodaje se (tj. treba se vratiti na početak petlje)
                 if (slučajniBroj % 2 == 0)
                     continue;
 
